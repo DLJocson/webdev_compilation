@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSCS32_COMP016_ACT1_JOCSON</title>
+</head>
+
+<body style="background-color:#f5f7fb; font-family: Arial, sans-serif; color: #333; line-height: 1.6; margin: 20px;">
+
+    <!-- 1. Header Section -->
+    <header style="background-color:#2c3e50; color:white; padding:10px; border-radius: 8px;">
+        <center>
+            <h1 style= "margin-bottom: 5px;">THE BASICS OF HTML</h1>
+            <p style = "margin-top: 0;"> <i>Activity 1 Submission by Dan Louie M. Jocson</i></p>
+        </center>
+    </header>
+
+    <br>
+
+    <!-- 2. Navigation Menu -->
+    <nav style="background-color:#e3e8ff; padding:15px; border-radius: 8px;">
+        <center>
+            <strong>
+                <a href="#syntax" style="color:#2c3e50; text-decoration: none; margin: 0 10px;">Introduction to HTML</a> |
+                <a href="#core" style="color:#2c3e50; text-decoration: none; margin: 0 10px;">Core Structure in HTML</a> |
+                <a href="#media" style="color:#2c3e50; text-decoration: none; margin: 0 10px;">Adding Media in HTML</a> |
+                <a href="#sidebar" style="color:#2c3e50; text-decoration: none; margin: 0 10px;">Cheat Sheet of Common HTML Tags</a>
+            </strong>
+        </center>
+    </nav>
+
+    <br>
+
+    <!-- Main Content Sections -->
+     <main style="background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.05);">
+
+        <!-- Section 1: Introduction to HTML -->
+         <section id="syntax">
+            <article>
+                <h2 style="color:#2c3e50; border-left:6px solid #4CAF50; padding-left:10px;"> Introduction to HTML</h2>
+                
+                <p>HTML, or <span style="background-color: yellow; padding: 2px 4px; border-radius: 3px; font-weight: bold;">HyperText Markup Language</span>, is the standard language used to create and design web pages. It provides the structure and content of a webpage, allowing developers to organize text, images, links, and other media in a way that browsers can interpret and display.</p>
+                <p>HTML uses a system of tags to define elements on a webpage. These tags are enclosed in angle brackets (< >) and typically come in pairs: an opening tag (e.g., <code>&lt;div&gt;</code>) and a closing tag (e.g., <code>&lt;/div&gt;</code>). The content between these tags is what gets displayed on the webpage.</p>
+                
+                <ul>
+                    <li><strong>Hypertext:</strong> Refers to the way in which Web pages are linked together.</li>
+                    <li><strong>Markup Language:</strong> Means you simply "mark-up" a text document with tags that tell a Web browser how to structure and display it.</li>
+                </ul>
+
+                <blockquote style="background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 10px 15px; margin: 20px 0; font-style: italic;">
+                    In HTML, adding extra lines of code does not affect the output of the webpage. This is because HTML ignores whitespace, including spaces, tabs, and newlines. You need to use specific tags to create line breaks or paragraphs.
+                </blockquote>
+
+                <h3 style="color:#34495e;">⚙️ How HTML Works (The Workflow)</h3>
+                <ol>
+                    <li><strong>Writing the Code:</strong> Either through a text editor or an Integrated Development Environment (IDE).</li>
+                    <li><strong>Saving the File:</strong> With a .html extension.</li>
+                    <li><strong>Opening in a Browser:</strong> The browser reads the HTML code and renders the webpage accordingly.</li>
+                </ol>
+
+                <hr style="border: 0; border-top: 3px solid #eee; margin: 20px 0;">
+
+                <h2 style="color:#2c3e50; border-left:6px solid #2196F3; padding-left:10px;">Basic Elements of an HTML</h2>
+                <p>Every HTML document has a basic structure that includes the following elements:</p>
+                <ul>
+                    <li><code>&lt;!DOCTYPE html&gt;</code>: Declares the document
+                        type and version of HTML being used.</li>
+                    <li><code>&lt;html&gt;</code>: The root element that wraps all
+                        content on the page.</li>
+                    <li><code>&lt;head&gt;</code>: Contains meta-information about the
+                        document, such as the title and links to stylesheets.</li>
+                    <li><code>&lt;body&gt;</code>: Contains the content that is
+                        displayed on the webpage.</li>
+                </ul>
+                
+                <p> These elements all contain a start tag and an end tag. With elements being able to nest within each other.</p>
+                
+                <fieldset style="border: 2px solid #e0e0e0; border-radius: 5px;">
+                    <legend><strong>Anatomy of an HTML Code</strong></legend>
+                    <pre style="background-color:#f4f4f4; padding:15px; border:1px solid #ccc; border-radius: 5px;"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt; <span style="background-color: yellow;">--&gt; Start tag for the head section</span>
+        &lt;title&gt;My First Webpage&lt;/title&gt;
+    &lt;/head&gt;  <span style="background-color: yellow;">--&gt; End tag for the head section</span>
+    &lt;body&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+        &lt;p&gt;This is my first webpage.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </fieldset>
+
+                </article>
+         </section>
+
+         <hr style="width:100%; border:2px solid #eee; margin: 40px 0;">
+
+        <!-- Section 2: Core Structure in HTML -->
+        <section id="core">
+            <article>
+                <h2 style="color:#2c3e50; border-left:6px solid #FF9800; padding-left:10px;">🏗️ Core HTML Structures</h2>
+                
+                <h3 style="color:#34495e;"> 1. Headings, Paragraphs, & Breaks</h3>
+                <ul>
+                    <li><strong>Headings (&lt;h1&gt; to &lt;h6&gt;):</strong> Defines the document outline. <code>&lt;h1&gt;</code> is the most important, and make sure to use them in a hierarchical order.</li>
+                    <li><strong>Paragraphs (&lt;p&gt;):</strong> Starts on a new line; browsers automatically add whitespace before and after.</li>
+                    <li><strong>Line Break (&lt;br&gt;):</strong> An empty tag used to force a new line without starting a new paragraph.</li>
+                    <li><strong>Horizontal Rule (&lt;hr&gt;):</strong> Defines a thematic break (usually displayed as a line) to separate content.</li>
+                </ul>
+
+                <h3 style="color:#34495e;"> 2. Preformatted Text (&lt;pre&gt;)</h3>
+                <p>The <code>&lt;pre&gt;</code> tag is used to display preformatted text. It preserves both spaces and line breaks, making it ideal for displaying code or any text where formatting is important.</p>
+                
+                <pre style="background-color:#f4f4f4; padding:15px; border:1px solid #ccc; border-radius: 5px; overflow-x: auto;"><code>
+&lt;pre&gt;
+My Bonnie lies over the ocean.
+    My Bonnie lies over the sea.
+&lt;/pre&gt;
+                </code></pre>
+
+                <h3 style="color:#34495e;"> 3. HTML Links</h3>
+                <p>The anchor tag (<code>&lt;a&gt;</code>) creates hyperlinks, which are the foundation of the web.</p>
+                <ul>
+                    <li><strong>Internal:</strong> <code>&lt;a href="#section-id"&gt;</code> (Jumps to a section on the same page)</li>
+                    <li><strong>External:</strong> <code>&lt;a href="https://example.com"&gt;</code> (Goes to another website)</li>
+                    <li><strong>Email:</strong> <code>&lt;a href="mailto:user@email.com"&gt;</code> (Opens email client)</li>
+                    <li><strong>Phone:</strong> <code>&lt;a href="tel:+639171234567"&gt;</code> (Dials number on mobile)</li>
+                    <li><strong>Download:</strong> <code>&lt;a href="file.pdf" download&gt;</code> (Downloads instead of navigating)</li>
+                </ul>
+
+                <h3 style="color:#34495e;">📊 4. HTML Tables & Forms</h3>
+                <p>HTML also uses specific tags to organize tabular data and collect input from users.</p>
+                
+                <table border="1" cellpadding="10" cellspacing="0" width="80%" style="background-color:#ffffff; border-collapse: collapse;">
+                    <tr style="background-color: #f0f4ff;">
+                        <th>Table Header (&lt;th&gt;)</th>
+                        <th>Table Header (&lt;th&gt;)</th>
+                    </tr>
+                    <tr>
+                        <td>Table Data (&lt;td&gt;)</td>
+                        <td>Table Data (&lt;td&gt;)</td>
+                    </tr>
+                </table>
+
+                <br>
+                
+                <fieldset style="border: 2px solid #e0e0e0; border-radius: 5px;">
+                    <legend><strong>Sample Form (&lt;form&gt;)</strong></legend>
+                    <form action="#">
+                        <label for="username">Input Tag:</label>
+                        <input type="text" id="username" name="username" placeholder="Type here..." style="padding: 5px;">
+                        <button type="submit" style="padding: 5px 10px; background-color: #2c3e50; color: white; border: none; border-radius: 4px; cursor: pointer;">Submit Button</button>
+                    </form>
+                </fieldset>
+            </article>
+        </section>
+
+        <hr style="width:100%; border:2px solid #eee; margin: 40px 0;">
+
+        <!-- Section 3: Adding Media in HTML -->
+        <section id="media">
+            <article>
+                 <h2 style="color:#2c3e50; border-left:6px solid #9C27B0; padding-left:10px;">Embedding Multimedia</h2>
+                <p>HTML allows you to embed various types of media, such as images, audio, and video, using specific tags.</p>
+                <h3 style="color:#34495e;">1. Images (&lt;img&gt;)</h3>
+                <p>The <code>&lt;img&gt;</code> tag is used to embed images. It is an empty tag, meaning it does not have a closing tag. The most important attributes for the <code>&lt;img&gt;</code> tag are:</p>
+                <ul>
+                    <li><strong>src:</strong> Specifies the path to the image file.</li>
+                    <li><strong>alt:</strong> Provides alternative text for the image if it cannot be displayed.</li>
+                    <li><strong>width & height:</strong> Define the dimensions of the image.</li>
+                </ul>
+                <h3 style="color:#34495e;">2. Audio (&lt;audio&gt;)</h3>
+                <p>The <code>&lt;audio&gt;</code> tag is used to embed audio files. It can contain one or more <code>&lt;source&gt;</code> elements to specify different audio formats for compatibility across browsers. The <code>controls</code> attribute adds playback controls to the audio player.</p>
+                <h3 style="color:#34495e;">3. Video (&lt;video&gt;)</h3>
+                <p>The <code>&lt;video&gt;</code> tag is used to embed video files. Similar to the <code>&lt;audio&gt;</code> tag, it can contain multiple <code>&lt;source&gt;</code> elements for different video formats. The <code>controls</code> attribute adds playback controls to the video player.</p>
+                
+                <fieldset style="border: 2px solid #e0e0e0; border-radius: 5px;">
+                    <legend><strong>Sample Code for Embedding Multimedia</strong></legend>
+                    <pre style="background-color:#f4f4f4; padding:15px; border:1px solid #ccc; border-radius: 5px;"><code>
+&lt;!-- Image Example --&gt;
+&lt;figure&gt;
+    &lt;img src="image.jpg" alt="Description of image" width="500" height="600" 
+    title="Sample Image" loading="lazy"&gt;
+    &lt;figcaption&gt;Figure 1: Example of an embedded image in HTML.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;!-- Audio Example --&gt;
+&lt;audio controls preload="metadata"&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    &lt;source src="audio.ogg" type="audio/ogg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+
+
+&lt;!-- Video Example --&gt;
+&lt;video controls width="400" poster="thumbnail.jpg" preload="metadata"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;source src="video.webm" type="video/webm"&gt;
+
+    &lt;!-- Caption Track --&gt;
+    &lt;track src="subtitles.vtt" kind="subtitles" srclang="en" label="English"&gt;
+
+    Your browser does not support the video tag.
+&lt;/video&gt;
+                    </code></pre>
+                </fieldset>
+
+                                <div style="margin-top: 20px;">
+                    <fieldset style="border: 2px solid #e0e0e0; border-radius: 5px;">
+                        <legend><strong>Media Elements Output</strong></legend>
+                        
+                        <figure>
+                            <figcaption><strong>Image:</strong></figcaption><br>
+                            <img src="https://i.pinimg.com/736x/a0/9e/44/a09e4437cd21fb5fdbba7b481f219427.jpg" alt="A sample image" style="border: 2px solid #ccc; border-radius: 5px; max-width: 25%;">
+                        </figure>
+                        
+                        <br>
+                        
+                        <figure>
+                            <figcaption><strong>Audio:</strong></figcaption><br>
+                            <audio controls>
+                                <source src="https://www.soundjay.com/buttons_c2026/sounds/button-1.mp3" type="audio/mpeg">
+                            </audio>
+                        </figure>
+                        
+                        <br>
+                        
+                        <figure>
+                            <figcaption><strong>Video (HTML5 Video Tag):</strong></figcaption><br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/IVwijZqwsPw?si=P6akaB7RQlb9I5sf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </figure>
+                    </fieldset>
+                </div>
+
+            </article>
+        </section>
+     </main>
+
+    <br>
+
+        <!-- 5. Sidebar (Aside) -->
+    <aside id="sidebar" style="background-color:#f0f4ff; padding:25px; border:2px solid #d0d7f4; border-radius:8px;">
+        
+        <!-- Added Quick Facts & Related Links -->
+        <h2 style="color:#2c3e50; margin-top: 0;">💡 Quick Facts</h2>
+        <ul style="margin-bottom: 20px;">
+            <li>HTML was created by Sir Tim Berners-Lee in late 1991 but wasn't officially published until 1993.</li>
+            <li>HTML5 is the latest major version, adding semantic elements and native multimedia tags.</li>
+            <li>Tags are generally not case-sensitive, but using lowercase is the industry standard.</li>
+        </ul>
+
+        <h2 style="color:#2c3e50;">🔗 Related Links</h2>
+        <ul style="margin-bottom: 20px;">
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" style="color:#1f3c88;">MDN Web Docs: HTML Elements Reference</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank" style="color:#1f3c88;">W3Schools: HTML Tutorial</a></li>
+            <li><a href="https://html.spec.whatwg.org/multipage/" target="_blank" style="color:#1f3c88;">WHATWG: HTML Living Standard</a></li>
+        </ul>
+
+        <hr style="border: 1px solid #d0d7f4; margin: 20px 0;">
+
+        <h2 style="color:#2c3e50; margin-top: 0;">📚 Coding Cheat Sheet</h2>
+
+        <details>
+            <summary style="font-size:16px; color:#1f3c88; cursor: pointer; padding: 5px 0;"><strong>👉 HTML Quick Reference</strong></summary>
+            <ul>
+                <li><code>&lt;html&gt;</code> - The root element</li>
+                <li><code>&lt;head&gt;</code> - Contains metadata & title</li>
+                <li><code>&lt;body&gt;</code> - The visible page content</li>
+                <li><code>&lt;div&gt;</code> - A block container</li>
+                <li><code>&lt;span&gt;</code> - An inline container</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary style="font-size:16px; color:#1f3c88; cursor: pointer; padding: 5px 0;"><strong>👉 Text Formatting</strong></summary>
+            <ul>
+                <li><code>&lt;h1&gt; - &lt;h6&gt;</code> – Headings</li>
+                <li><code>&lt;p&gt;</code> – Paragraph</li>
+                <li><code>&lt;strong&gt;</code> – Important text</li>
+                <li><code>&lt;em&gt;</code> – Emphasized text</li>
+                <li><code>&lt;b&gt;</code> – Bold text</li>
+                <li><code>&lt;i&gt;</code> – Italic text</li>
+                <li><code>&lt;mark&gt;</code> – Highlight text</li>
+                <li><code>&lt;br&gt;</code> – Line break</li>
+                <li><code>&lt;hr&gt;</code> – Horizontal rule</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary style="font-size:16px; color:#1f3c88; cursor: pointer; padding: 5px 0;"><strong>👉 Links & Navigation</strong></summary>
+            <ul>
+                <li><code>&lt;a&gt;</code> – Hyperlink</li>
+                <li><code>href</code> – Link destination</li>
+                <li><code>target="_blank"</code> – Opens link in new tab</li>
+                <li><code>&lt;nav&gt;</code> – Navigation container</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary style="font-size:16px; color:#1f3c88; cursor: pointer; padding: 5px 0;"><strong>👉 Lists</strong></summary>
+            <ul>
+                <li><code>&lt;ul&gt;</code> – Unordered list</li>
+                <li><code>&lt;ol&gt;</code> – Ordered list</li>
+                <li><code>&lt;li&gt;</code> – List item</li>
+                <li><code>&lt;dl&gt;</code> – Description list</li>
+                <li><code>&lt;dt&gt;</code> – Term</li>
+                <li><code>&lt;dd&gt;</code> – Definition</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary style="font-size:16px; color:#1f3c88; cursor: pointer; padding: 5px 0;"><strong>👉 Media Tags</strong></summary>
+            <ul>
+                <li><code>&lt;img&gt;</code> – Image</li>
+                <li><code>&lt;audio&gt;</code> – Audio player</li>
+                <li><code>&lt;video&gt;</code> – Video player</li>
+                <li><code>&lt;source&gt;</code> – Media file source</li>
+                <li><code>&lt;figure&gt;</code> – Media container</li>
+                <li><code>&lt;figcaption&gt;</code> – Caption</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary style="font-size:16px; color:#1f3c88; cursor: pointer; padding: 5px 0;"><strong>👉 Tables</strong></summary>
+            <ul>
+                <li><code>&lt;table&gt;</code> – Table container</li>
+                <li><code>&lt;tr&gt;</code> – Table row</li>
+                <li><code>&lt;td&gt;</code> – Table data</li>
+                <li><code>&lt;th&gt;</code> – Table header</li>
+                <li><code>&lt;thead&gt;</code> – Table header group</li>
+                <li><code>&lt;tbody&gt;</code> – Table body</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary style="font-size:16px; color:#1f3c88; cursor: pointer; padding: 5px 0;"><strong>👉 Forms & Inputs</strong></summary>
+            <ul>
+                <li><code>&lt;form&gt;</code> – Form container</li>
+                <li><code>&lt;input&gt;</code> – Input field</li>
+                <li><code>&lt;label&gt;</code> – Label for input</li>
+                <li><code>&lt;textarea&gt;</code> – Multi-line input</li>
+                <li><code>&lt;select&gt;</code> – Dropdown menu</li>
+                <li><code>&lt;button&gt;</code> – Clickable button</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary style="font-size:16px; color:#1f3c88; cursor: pointer; padding: 5px 0;"><strong>👉 Semantic Layout</strong></summary>
+            <ul>
+                <li><code>&lt;header&gt;</code> – Page header</li>
+                <li><code>&lt;nav&gt;</code> – Navigation menu</li>
+                <li><code>&lt;main&gt;</code> – Main content</li>
+                <li><code>&lt;section&gt;</code> – Content section</li>
+                <li><code>&lt;article&gt;</code> – Independent content</li>
+                <li><code>&lt;aside&gt;</code> – Sidebar</li>
+                <li><code>&lt;footer&gt;</code> – Page footer</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary style="font-size:16px; color:#1f3c88; cursor: pointer; padding: 5px 0;"><strong>👉 HTML Special Characters</strong></summary>
+            <ul>
+                <li><code>&amp;lt;</code> – &lt;</li>
+                <li><code>&amp;gt;</code> – &gt;</li>
+                <li><code>&amp;amp;</code> – &amp;</li>
+                <li><code>&amp;copy;</code> – ©</li>
+                <li><code>&amp;nbsp;</code> – Non-breaking space</li>
+            </ul>
+        </details>
+    </aside>
+
+    <br>
+
+    <!-- 6. Footer -->
+    <footer style="background-color:#2c3e50; color:white; padding:20px; border-radius: 8px;">
+        <center>
+            <p><strong>Student Name:</strong> Dan Louie M. Jocson &nbsp;|&nbsp; <strong>Course:</strong> COMP 016 &nbsp;|&nbsp; <strong>Year/Section:</strong> 3rd Year (BSCS 3-2)</p>
+            <p><small>Introduction to HTML (Basic and Semantic Tags) - Activity</small></p>
+            <p><small>&copy; 2026 Dan Louie M. Jocson. All rights reserved.</small></p>
+        </center>
+    </footer>
+
+</body>
+</html>
