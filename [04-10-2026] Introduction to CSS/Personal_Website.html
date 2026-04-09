@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage</title>
+    
+    <style>
+        body {
+            background-color: #F5EFFF;
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.2em;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        h2 {
+            color: #7F55B1;
+            font-size: 1.8em;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #9B7EBD;
+            font-size: 1.3em;
+        }
+
+        header {
+            background-color: #7F55B1;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #FFE1E0;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        nav a {
+            color: #7F55B1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #F49BAB;
+        }
+
+        main {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        table, th, td {
+            border: 2px solid #9B7EBD;
+        }
+
+        th {
+            background-color: #9B7EBD;
+            color: #ffffff;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 12px;
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #7F55B1;
+        }
+
+        .action-btn {
+            padding: 12px 25px;
+            margin: 10px 10px 10px 0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        .btn-alert { background-color: #F49BAB; }
+        .btn-alert:hover { background-color: #9B7EBD; transform: translateY(-2px); }
+
+        .btn-redirect { background-color: #9B7EBD; }
+        .btn-redirect:hover { background-color: #7F55B1; transform: translateY(-2px); }
+
+        .btn-submit { background-color: #7F55B1; }
+        .btn-submit:hover { background-color: #9B7EBD; transform: translateY(-2px); }
+
+        .btn-reset { background-color: #FFE1E0; color: #7F55B1; }
+        .btn-reset:hover { background-color: #F49BAB; color: white; transform: translateY(-2px); }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #7F55B1;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #FFE1E0;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus, 
+        input[type="email"]:focus, 
+        textarea:focus {
+            border-color: #9B7EBD;
+            outline: none;
+            box-shadow: 0 0 5px rgba(155, 126, 189, 0.3);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #7F55B1;
+            color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #7F55B1;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="customAlert" class="modal">
+        <strong>Hello! This is your alert message!</strong><br><br>
+        <button onclick="document.getElementById('customAlert').style.display='none'" class="action-btn btn-submit" style="padding: 8px 15px; margin:0;">Close</button>
+    </div>
+
+    <header>
+        <h1>My Personal Webpage</h1>
+        <p style="margin: 5;"><i>Introduction to CSS: Activity Submission by Dan Louie M. Jocson</i></p> 
+    </header>
+
+    <nav>
+        <a href="#skills">Section 1: Skills</a> |
+        <a href="#schedule">Section 2: Schedule</a> |
+        <a href="#buttons">Section 3: Buttons</a> |
+        <a href="#contact">Section 4: Contact Form</a>
+    </nav>
+
+    <main>
+        <section id="skills">
+            <h2 style="border-left: 6px solid #7F55B1;">My Skills</h2>
+            <p>Here is an overview of my professional skills and interests:</p>
+            <ul style="background-color: #F5EFFF; padding: 25px 40px; border-radius: 5px; border: 1px solid #FFE1E0; list-style-type: none;">
+                <li style="margin-bottom: 15px;">
+                    <strong style="color: #7F55B1; font-size: 1.1em;">Technical Skills:</strong>
+                    <ul style="margin-top: 5px; padding-left: 20px;">
+                        <li>Proficient in a wide range of computer programs and software, notably Microsoft Office Suite and Google Workspace.</li>
+                        <li>Proficient in programming languages including C, Java, JavaScript, HTML, and Python.</li>
+                        <li>Basic knowledge of graphic design tools, including Figma, Canva, Photoshop, and Illustrator.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong style="color: #7F55B1; font-size: 1.1em;">Languages:</strong>
+                    <p style="margin: 5px 0 0 20px;">Proficient in formal English, has great written and vocal communication skills, guaranteeing clarity and professionalism across all interactions.</p>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong style="color: #7F55B1; font-size: 1.1em;">Organization and Attention to Details:</strong>
+                    <ul style="margin-top: 5px; padding-left: 20px;">
+                        <li>Excellent time management skills, as well as strong organizational abilities, ensuring a proper job in prioritizing multiple documents and tasks.</li>
+                        <li>Has a keen attention to detail and a methodical approach to work, ensuring that each task is completed correctly and precisely.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong style="color: #7F55B1; font-size: 1.1em;">Interests:</strong>
+                    <p style="margin: 5px 0 0 20px;">Reading, Writing, Journaling, and Video Games.</p>
+                </li>
+            </ul>
+        </section>
+
+        <hr style="border: 0; border-top: 2px solid #FFE1E0; margin: 40px 0;">
+
+        <section id="schedule">
+            <h2 style="border-left: 6px solid #9B7EBD;">Section 2: Weekly Schedule Table</h2>
+            <div style="overflow-x: auto;">
+                <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; background-color:#ffffff; border-collapse: collapse; text-align: center;">
+                    <caption style="font-weight: bold; margin-bottom: 10px; font-size: 1.1em;">My Weekly Schedule</caption>
+                    <tr style="background-color: #9B7EBD; color: #ffffff;">
+                        <th style="width: 16%;">Time</th>
+                        <th style="width: 14%;">Monday</th>
+                        <th style="width: 14%;">Tuesday</th>
+                        <th style="width: 14%;">Wednesday</th>
+                        <th style="width: 14%;">Thursday</th>
+                        <th style="width: 14%;">Friday</th>
+                        <th style="width: 14%;">Saturday</th>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; background-color: #F5EFFF;">08:00 AM – 09:00 AM</td>
+                        <td style="background-color: #BFECFF;"><strong>COSC 305</strong><br><small>CS Thesis Writing 1</small></td>
+                        <td style="background-color: #CDC1FF;"><strong>COMP 016</strong><br><small>Web Development</small></td>
+                        <td rowspan="9" style="color:#7F55B1; background-color: #F5EFFF; vertical-align: middle;"><strong>Free Time</strong></td>
+                        <td style="background-color: #BFECFF;"><strong>COSC 305</strong><br><small>CS Thesis Writing 1</small></td>
+                        <td style="background-color: #CDC1FF;"><strong>COMP 016</strong><br><small>Web Development</small></td>
+                        <td rowspan="3" style="color:#7F55B1; background-color: #F5EFFF; vertical-align: middle;">Free Time</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; background-color: #F5EFFF;">10:30 AM – 12:00 PM</td>
+                        <td style="background-color: #FFF6E3;"><strong>GEED 006</strong><br><small>Art Appreciation</small></td>
+                        <td rowspan="2" style="background-color: #BFECFF; vertical-align: middle;"><strong>COSC 305</strong><br><small>CS Thesis Writing 1</small></td>
+                        <td style="background-color: #FFF6E3;"><strong>GEED 006</strong><br><small>Art Appreciation</small></td>
+                        <td rowspan="2" style="background-color: #CDC1FF; vertical-align: middle;"><strong>COMP 016</strong><br><small>Web Development</small></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; background-color: #F5EFFF;">12:00 PM – 01:30 PM</td>
+                        <td style="color:#7F55B1; background-color: #F5EFFF;">Free Time</td>
+                        <td style="color:#7F55B1; background-color: #F5EFFF;">Free Time</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; background-color: #F5EFFF;">01:30 PM – 02:00 PM</td>
+                        <td rowspan="4" style="background-color: #FFCCEA; vertical-align: middle;"><strong>COSC 304</strong><br><small>Intro to Artificial Intelligence</small></td>
+                        <td rowspan="4" style="color:#7F55B1; background-color: #F5EFFF; vertical-align: middle;">Free Time</td>
+                        <td rowspan="2" style="background-color: #FFCCEA; vertical-align: middle;"><strong>COSC 304</strong><br><small>Intro to Artificial Intelligence</small></td>
+                        <td rowspan="4" style="color:#7F55B1; background-color: #F5EFFF; vertical-align: middle;">Free Time</td>
+                        <td style="color:#7F55B1; background-color: #F5EFFF;">Free Time</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; background-color: #F5EFFF;">02:00 PM – 03:30 PM</td>
+                        <td rowspan="2" style="background-color: #C7EABB; vertical-align: middle;"><strong>INTE 201</strong><br><small>Programming 3 (Structured)</small></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; background-color: #F5EFFF;">03:30 PM – 04:00 PM</td>
+                        <td rowspan="2" style="color:#7F55B1; background-color: #F5EFFF; vertical-align: middle;">Free Time</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; background-color: #F5EFFF;">04:00 PM – 04:30 PM</td>
+                        <td style="color:#7F55B1; background-color: #F5EFFF;">Free Time</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; background-color: #F5EFFF;">04:30 PM – 06:30 PM</td>
+                        <td rowspan="2" style="background-color: #8CA9FF; vertical-align: middle;"><strong>COMP 021</strong><br><small>Software Engineering 1</small></td>
+                        <td style="background-color: #F08787;"><strong>COMP 020</strong><br><small>Info Assurance & Security</small></td>
+                        <td style="background-color: #8CA9FF;"><strong>COMP 021</strong><br><small>Software Engineering 1</small></td>
+                        <td rowspan="2" style="background-color: #F08787; vertical-align: middle;"><strong>COMP 020</strong><br><small>Info Assurance & Security</small></td>
+                        <td rowspan="2" style="background-color: #C7EABB; vertical-align: middle;"><strong>INTE 201</strong><br><small>Programming 3 (Structured)</small></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; background-color: #F5EFFF;">06:30 PM – 07:30 PM</td>
+                        <td style="color:#7F55B1; background-color: #F5EFFF;">Free Time</td>
+                        <td style="color:#7F55B1; background-color: #F5EFFF;">Free Time</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <hr style="border: 0; border-top: 2px solid #FFE1E0; margin: 40px 0;">
+
+        <section id="buttons">
+            <h2 style="border-left: 6px solid #F49BAB;">Section 3: Buttons</h2>
+            <p>Click the buttons below to see CSS hover effects and JavaScript actions in work:</p>
+            <div style="background-color: #F5EFFF; padding: 20px; border: 1px solid #FFE1E0; border-radius: 5px;">
+                <button type="button" class="action-btn btn-alert" onclick="document.getElementById('customAlert').style.display='block';">
+                    Show Alert Message
+                </button>
+                <button type="button" class="action-btn btn-redirect" onclick="window.open('https://www.google.com', '_blank')">
+                    Go to Google
+                </button>
+            </div>
+        </section>
+
+        <hr style="border: 0; border-top: 2px solid #FFE1E0; margin: 40px 0;">
+
+        <section id="contact">
+            <h2 style="border-left: 6px solid #7F55B1;">Section 4: Contact Form</h2>
+            <form action="#" method="get" style="background-color: #F5EFFF; padding: 30px; border: 1px solid #FFE1E0; border-radius: 8px;">
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male" style="display:inline; font-weight:normal; margin-right: 15px;">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" style="display:inline; font-weight:normal; margin-right: 15px;">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other" style="display:inline; font-weight:normal;">Other</label>
+                </div>
+
+                <div class="form-group">
+                    <label>Hobbies:</label>
+                    <input type="checkbox" id="coding" name="hobbies" value="coding">
+                    <label for="coding" style="display:inline; font-weight:normal; margin-right: 15px;">Coding</label>
+                    <input type="checkbox" id="reading" name="hobbies" value="reading">
+                    <label for="reading" style="display:inline; font-weight:normal; margin-right: 15px;">Reading</label>
+                    <input type="checkbox" id="gaming" name="hobbies" value="gaming">
+                    <label for="gaming" style="display:inline; font-weight:normal;">Gaming</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <button type="submit" class="action-btn btn-submit">Submit Form</button>
+                    <button type="reset" class="action-btn btn-reset">Reset</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p style="margin: 5px 0;"><strong>Student Name:</strong> Dan Louie M. Jocson &nbsp;|&nbsp; <strong>Course:</strong> COMP 016 &nbsp;|&nbsp; <strong>Year/Section:</strong> 3rd Year (BSCS 3-2)</p>
+        <p style="margin: 5px 0;"><small>Introduction to CSS Activity Submission</small></p>
+        <p style="margin: 5px 0;"><small>&copy; 2026 Dan Louie M. Jocson. All rights reserved.</small></p>
+    </footer>
+
+</body>
+</html>
